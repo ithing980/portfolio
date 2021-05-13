@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.join_box {border:1px solid #ccc; width:800px; padding-right: 20px;
+    padding-left: 20px; margin-left: 500px; height:400px;
+}
+.join_box > h1 {font-size:30px; font-weight:500; padding-bottom:15px; margin-top:-80px;}
+.join_box > p {font-size:12px; padding-bottom:40px; color:red;}
+.join_box {padding:100px 20px; margin-left:500px; }
+.row {padding-left:100px; padding-bottom:20px;}
+.row > div {float:left; padding-right:40px; display:inline-block; width:120px; margin-left:-10px;}
+.row input[type="text"], .row input[type="password"] {width:400px; margin-right:0;}
+.row > div > span {color:red; padding-right:5px;}
+#dup_check {width:80px; height:40px; background-color:#34b5a1; border:none; color:#fff;
+	margin-left:0; 
+}
+#dup_check:hover {cursor:pointer; text-decoration:underline;}
+.row > label span {color:red;}
+.row > input {/* width:500px; height:40px; margin-bottom:20px; margin-top:-10px; */
+	height:40px; width: 50%; font-size: 18px; box-sizing: border-box;
+    padding:10px; display: inline-block; outline:none;
+    border: 1px solid #ccc;
+}
+
+.agree {padding-top:10px; height:70px;}
+.agree > div {margin-bottom: 25px;}
+.row > .privacy { padding-right: 400px;}
+.row > p {padding-left:200px;}
+.row a {float:right; margin-right:-290px;}
+.row input[type="checkbox"] {margin-left:100px; display: block; margin-top: -15px;}
+.privacy > a, .terms > a {display:block; margin-top:-15px;}
+.privacy > p, .terms > p {padding-left:10px;}
+
+.btn_area {text-align:center; padding-top:20px;}
+.btn_area button {width:100px; height:60px; font-size:20px; border:none;}
+.btn_area button:hover {cursor:pointer; text-decoration:underline;}
+#join_btn {background-color:#34b5a1 !important; color:#fff; }
+#cancel {color:#aaa}

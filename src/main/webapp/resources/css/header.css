@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.upper { width:100%; height:30px;  background-color:#000;
+/* position: absolute; right: 20px; top: 10px; */} /* 오른쪽 */
+.upper a {font-size:20px; color:#fff; text-decoration:none;}
+.main {font-size:20px; text-align:center;}  
+.dental a {text-decoration:none; padding-left:20px; color:black;}
+#logo_header {padding-top:50px; padding-bottom:40px; height:80px; margin-left:400px;}
+
+#gnb > ul {
+  margin-left:700px;
+  margin-top: 65px;
+  position: absolute; 
+  background-color:#fff;
+}
+#gnb a {text-decoration: none;  color:black; font-size:23px; 
+	padding-left:20px; display: block;
+}
+#gnb > ul > li {float:left; margin:0 auto; display: block;}
+#gnb > ul > li > a {display: inline-block; padding:15px 20px;}
+#gnb > ul > li > ul > li > a {display: inline-block; width: 100%; padding:10px 0;
+text-align: center; color:#fff; font-size:18px; background-color:#333; } 
+/* #gnb ul {background-color: #333;} */
+#gnb {float: left; margin-left: 20px;}
+#gnb > ul > li > ul {overflow: hidden; height: 0;}
+#gnb > ul > li:hover > ul {height: auto;}
+
+
+
+
+
+
+

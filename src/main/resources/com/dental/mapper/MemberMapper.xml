@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dental.mapper.MemberMapper">
+	<select id="MemberLogin" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM dh_members WHERE dhm_id=#{dhm_id} AND dhm_pwd=#{dhm_pwd}
+	</select>
+	
+	<select id="SimpleMemeberInfo" resultType="com.dental.vo.SimpleMemberVO">
+		SELECT dhm_id,dhm_name,dhm_type,dhm_seq
+ 		FROM dh_members
+ 		WHERE dhm_id=#{dhm_id} AND dhm_pwd=#{dhm_pwd}
+	</select>
+	
+	<insert id="MemberJoin">
+		INSERT INTO dh_members(dhm_id,dhm_pwd,dhm_name,dhm_email,dhm_phone)
+		VALUES(#{dhm_id},#{dhm_pwd},#{dhm_name},#{dhm_email},#{dhm_phone})
+	</insert>
+	
+	<select id="selectMemberCntById" resultType="java.lang.Integer">   <!-- join -->
+		SELECT COUNT(*) FROM dh_members WHERE dhm_id=#{dhm_id}
+	</select>
+</mapper>

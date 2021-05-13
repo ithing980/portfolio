@@ -1,0 +1,10 @@
+.img_wrap {padding-left:400px;}
+.img2 {height:200px;}
+.img3 {height:300px; width:550px;  margin-left:-20px; margin-top:50px;}
+.img4 {width:1140px; height:350px;}
+
+.time {margin-top: -140px; font-size: 50px; color: #fff; padding-left: 110px; margin-bottom:50px;} 
+.title_detail {margin-left:700px; margin-bottom:100px; margin-top:-220px; font-size:30px;}
+.title_detail > div {margin-bottom:-10px;}
+.end {color:red;}
+.subject {z-index:99; margin-top:-250px; color:#fff; font-size:30px; margin-left:800px; font-weight:bold;} 

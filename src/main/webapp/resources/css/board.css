@@ -1,0 +1,46 @@
+.board_wrap > h1 {
+	text-align:center; padding-top:80px; font-size:40px; padding-bottom:40px;
+}
+.board_wrap {width:1100px; margin:0 auto;}
+.board_table {width:100%; border-bottom:1px solid #999; margin-bottom:50px;}
+.board_table thead {background-color:#ccc;}
+.board_table tr {border-bottom: 1px solid #ccc;}
+.board_table td, .board_table th {
+    padding:10px; text-align: center;
+}
+.board_table th:nth-child(1) {width: 80px;}
+.board_table th:nth-child(2) {width: 500px;}
+.board_table th:nth-child(3) {width: 120px;}
+.board_table th:nth-child(4) {width: 80px;}
+.board_table a {color:black; text-decoration:none;}
+
+#write {float:right; margin-top:-30px; text-decoration:none; color:black;
+	border:1px solid #ccc; padding:10px; border-radius:3px; background-color:#ccc;
+}
+
+.pager_area {text-align: center; margin:20px 0;}
+.pager_area .pagers {display: inline-block;}
+.pagers a {margin:0 5px; color: #333; text-decoration: none;}
+.pagers a.current {font-weight: bold; text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

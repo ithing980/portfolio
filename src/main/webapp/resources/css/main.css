@@ -1,0 +1,32 @@
+.main {padding:0px;}
+.main_list {background-color:#eee; padding:0;}
+.main_list > h1 {font-size:32px; margin:50px; padding-top:30px; font-weight:500; margin-top:10px; margin-bottom:10px;}
+.main_list > p {font-size:16px; color:#ccc; margin-top:5px;}
+.care {padding:50px; z-index:999;}
+.left_box {width:400px; margin-left:-400px; margin-right:100px;
+	display:inline-block; margin-bottom:50px;
+}
+.right_box {width:400px; padding-top:50px; display:inline-block;
+	margin-right:-400px; margin-left:100px;
+}
+#logo {padding-top:-20px;}
+
+.icon1, .icon3 {padding-bottom:100px; }
+
+.consult > h1 {font-size:32px; margin:50px; color:#fff; padding-top:30px; font-weight:500;}
+.consult {background-color:rgb(108, 108, 108); height:800px;}
+/* .consult > div {padding:50px;} */
+.consult > img {width:600px; height:500px; padding-right:250px; padding-top:50px; margin-left:-400px;}
+
+.direction, .notice {padding-top:30px; float:left; padding-left:20px;}
+
+.intro > h4 {padding-top:10px; }
+div > a {color:orange; font-size:14px;}
+.intro > p {font-size:15px; padding-top:10px;}
+
+.connect {width: 500px; padding: 0; margin: 0 auto; margin-right: 0px; border:1px solid #fff; padding:60px; margin-left:925px; background-color:#fff;
+	margin-top:-502px; height:378px;
+}
+.connect > p {font-size:30px; font-weight:500; padding-top:50px;}
+#consult_move {width:200px; height:80px; background-color:orange; color:#fff; border:none; font-size:20px; margin-top:100px; box-shadow:0 2px 5px rgba(0,0,0,0.3)}
+#consult_move:hover {cursor:pointer;}

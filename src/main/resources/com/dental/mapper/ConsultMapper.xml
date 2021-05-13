@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dental.mapper.ConsultMapper">
+	<select id="getPostList" resultType="com.dental.vo.ConsultVO">
+		SELECT a.*, b.dhm_name FROM
+       	dh_consult a
+       	INNER JOIN
+       	dh_members b
+       	on a.dhc_owner = b.dhm_seq
+       	WHERE dhc_board_seq=#{board}
+       	ORDER BY dhc_seq DESC
+        LIMIT 15 OFFSET #{offset}
+	</select>
+	
+  	<select id="getPostBySeq" resultType="com.dental.vo.ConsultVO">
+        SELECT * FROM dh_consult WHERE dhc_seq=#{no} 
+    </select>
+    
+    <select id="selectPostByUserId" resultType="com.dental.vo.ConsultVO">  
+		SELECT a.dhb_name, b.* FROM 
+		dh_board a 
+		INNER JOIN dh_consult b
+		ON a.dhb_seq=b.dhc_board_seq
+		where b.dhc_owner=#{user_seq}
+		ORDER BY b.dhc_reg_date DESC
+		LIMIT 10 OFFSET 0 
+	</select>
+	
+	<insert id="insertPost">
+  		INSERT INTO dh_consult(dhc_owner,dhc_title,dhc_content,dhc_board_seq)
+  		VALUES(#{user_seq}, #{post_title}, #{post_content}, #{board_seq})
+  	</insert>
+  	
+  	<delete id="deletePost">
+    	DELETE FROM dh_consult WHERE dhc_seq=#{seq} 
+    </delete>
+    
+    <update id="updatePost">
+    	UPDATE dh_consult SET dhc_title=#{dhc_title}, dhc_content=#{dhc_content}, dhc_mod_date=NOW() WHERE dhc_seq=#{dhc_seq}
+    </update>
+    
+    
+    
+    
+    <insert id="insertComment">
+        INSERT INTO dh_comment_info(dhci_dhc_seq, dhci_dhm_seq, dhci_content)
+        VALUES(#{dhci_dhc_seq}, #{dhci_dhm_seq}, #{dhci_content})
+    </insert>
+    
+    <select id="selectComment" resultType="com.dental.vo.CommentVO">
+        SELECT a.*, b.dhm_name FROM dh_comment_info a INNER JOIN dh_members b
+        ON a.dhci_dhm_seq = b.dhm_seq
+        WHERE dhci_dhc_seq=#{board_seq}
+        ORDER BY dhci_seq DESC
+        LIMIT 10 OFFSET #{offset} 
+    </select> 
+    
+    <select id="selectCommentCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM dh_comment_info a INNER JOIN dh_members b
+        ON a.dhci_dhm_seq = b.dhm_seq
+        WHERE dhci_dhc_seq=#{board_seq}
+    </select>
+    
+	<delete id="deleteComment">
+		DELETE FROM dh_comment_info WHERE dhci_seq=#{seq}
+	</delete>
+	
+	
+	
+	<select id="getBoardPostCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM
+        dh_consult a
+       	INNER JOIN
+       	dh_members b
+       	on a.dhc_owner = b.dhm_seq
+       	WHERE dhc_board_seq=#{board_seq}      
+        <if test="type=='title'">
+        	AND dhc_title LIKE #{keyword}
+        </if>
+        <if test="type=='content'">
+        	AND dhc_content LIKE #{keyword}
+        </if>
+        <if test="type=='author'">
+        	AND dhc_name LIKE #{keyword}
+        </if>
+    </select>
+
+
+	<update id="updatePostCount">
+        UPDATE dh_consult SET dhc_count = dhc_count + 1 WHERE dhc_seq=#{seq}
+    </update>
+</mapper>
